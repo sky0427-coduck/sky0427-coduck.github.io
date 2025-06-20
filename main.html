@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>크루 홈페이지</title>
+  <style>
+    body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background: #f4f4f4;  font-family: 'Gothic A1', sans-serif; }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
+
+    
+       
+   
+    header { background: #333; color: white; padding: 20px; text-align: center; }
+    nav { background: #444; padding: 10px; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; }
+    section { padding: 20px; }
+    .video-preview { display: flex; gap: 20px; flex-wrap: wrap; }
+    .video-box { background: white; padding: 10px; border-radius: 8px; width: 300px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>크루 웹사이트</h1>
+    <p>생존, 전략, 그리고 팀워크의 공간</p>
+  </header>
+  
+    <script>
+    function sayHi() {
+        alert("웹사이트에 오신 것을 환영합니다! 우리 크루는 게임과 개발을 사랑하는 청소년들로 구성되어 있습니다. 함께 즐거운 시간을 보내요!");
+    }
+    </script>
+
+<button onclick="sayHi()">인사하기</button>
+
+
+  <nav>
+    <a href="#about">크루 소개</a>
+    <a href="#rules">서버 규칙</a>
+    <a href="#videos">영상</a>
+    <a href="#board">커뮤니티</a>
+  </nav>
+
+  <section id="about">
+    <h2>👥 크루 소개</h2>
+    <p>우리 크루는 게임과 개발, 디자인을 사랑하는 청소년들이 모여 만든 팀입니다. our_pvp 서버를 운영하며 협업, 전략, 코딩 능력을 키워나가고 있어요!</p>
+  </section>
+
+  <section id="rules">
+    <h2>📜 서버 규칙</h2>
+    <ul>
+      <li>개인전 기반 PVP 서버 (약탈 가능)</li>
+      <li>100일 생존 제한 (95일까지 서바이벌, 이후 하드코어)</li>
+      <li>욕설/비속어 3회 누적 시 밴</li>
+      <li>의도적 죽음 → 불사의 토템 발동 + 이동 제한</li>
+      <li>게임 녹화 필수 / 녹화본 제출</li>
+    </ul>
+  </section>
+
+  <section id="videos">
+    <h2>🎬 최근 영상</h2>
+    <div class="video-preview">
+      <div class="video-box">
+        <video width="100%" controls>
+          <source src="videos/test1.mp4" type="video/mp4" />
+          브라우저가 비디오를 지원하지 않습니다.
+        </video>
+        <p>our_pvp 시즌1 오프닝</p>
+      </div>
+      <div class="video-box">
+        <video width="100%" controls>
+          <source src="videos/test2.mp4" type="video/mp4" />
+        </video>
+        <p⚔️ PvP 하이라이트 모음</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="board">
+    <h2>💬 커뮤니티</h2>
+    <p>아직 준비 중이에요. 곧 크루와 유저가 함께 소통할 수 있는 게시판이 열립니다!</p>
+  </section>
+
+  <footer style="background:#333; color:white; text-align:center; padding:10px;">
+    &copy; 2025 our_pvp 크루. All rights reserved.
+  </footer>
+
+</body>
+</html>
