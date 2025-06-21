@@ -1,0 +1,88 @@
+body {
+  font-family: 'SUIT', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fefefe;
+  color: #222;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+header {
+  background: linear-gradient(90deg, #A66CFF, #9E9AC9);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 5px solid #ffd6ec;
+}
+
+nav {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  font-weight: bold;
+}
+
+nav a {
+  color: #A66CFF;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: #9E9AC9;
+  text-decoration: underline;
+}
+
+section {
+  padding: 30px;
+}
+
+h2 {
+  color: #A66CFF;
+  margin-bottom: 10px;
+}
+
+.video-preview {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.video-box {
+  background: #fff;
+  padding: 15px;
+  border-radius: 16px;
+  width: 320px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+button {
+  background-color: #FFD6EC;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 999px;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 20px 10px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffcce5;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
