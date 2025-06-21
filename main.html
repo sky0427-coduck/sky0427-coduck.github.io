@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>크루 홈페이지</title>
@@ -13,6 +12,11 @@
       padding: 0;
       background: #fefefe;
       color: #222;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: white;
     }
 
     header {
@@ -76,7 +80,7 @@
       color: #333;
       font-weight: bold;
       cursor: pointer;
-      margin: 20px;
+      margin: 20px 10px;
       transition: background 0.3s ease;
     }
 
@@ -85,42 +89,25 @@
     }
 
     footer {
-      background: #f3f3f3;
+      background: #333;
+      color: white;
       text-align: center;
-      padding: 15px;
-      font-size: 0.9em;
-      color: #777;
+      padding: 10px;
     }
   </style>
-
-  <button onclick="toggleDarkMode()">🌙 다크모드</button>
-
-<script>
-  function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-  }
-</script>
-
-<style>
-  body.dark-mode {
-    background-color: #121212;
-    color: white;
-  }
-</style>
-
-
 </head>
+<body>
 
-    <script>
-      
-        function notice() {
-          window.location.href = "notice.html";
-        }
+  <header>
+    <h1>크루 웹사이트</h1>
+    <p>생존, 전략, 그리고 팀워크의 공간</p>
+  </header>
 
-    </script>  
-
-<button onclick="notice()">공지사항</button>
-
+  <!-- 버튼 -->
+  <div style="text-align: center;">
+    <button onclick="toggleDarkMode()">🌙 다크모드</button>
+    <button onclick="notice()">📢 공지사항</button>
+  </div>
 
   <nav>
     <a href="#about">크루 소개</a>
@@ -159,7 +146,7 @@
         <video width="100%" controls>
           <source src="videos/test2.mp4" type="video/mp4" />
         </video>
-        <p⚔️ PvP 하이라이트 모음</p>
+        <p>⚔️ PvP 하이라이트 모음</p>
       </div>
     </div>
   </section>
@@ -169,9 +156,18 @@
     <p>아직 준비 중이에요. 곧 크루와 유저가 함께 소통할 수 있는 게시판이 열립니다!</p>
   </section>
 
-  <footer style="background:#333; color:white; text-align:center; padding:10px;">
+  <footer>
     &copy; 2025 our_pvp 크루. All rights reserved.
   </footer>
 
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    function notice() {
+      window.location.href = "notice.html";
+    }
+  </script>
 </body>
 </html>
