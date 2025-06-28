@@ -4,18 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>공지사항</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js"></script> <!--js 꼭 불러와야함!! 진짜 까먹지좀말자ㅠㅠ-->
+</head>
+
+<body>
+
+  <header>
+    <h1>📢 공지사항</h1>
+    <button onclick="toggleDarkMode()" id="darkModeToggle">🌙 다크모드</button>
+    <button onclick="location.href='main.html'">🏠 홈으로</button>
+  </header>
 
   <section id="notice">
-  <h2>📢 공지사항</h2>
-  <ul class="notice-list">
-    <li>
+    <h2>📌 최근 공지</h2>
+    <ul class="notice-list">
+      <li>
+        <span class="date">2025-06-21</span>
+        <span class="content">서버 점검 안내: 6월 25일 오후 2시부터 4시까지 점검 예정입니다.</span>
+      </li>
+      <li>
+        <span class="date">2025-06-15</span>
+        <span class="content">새로운 이벤트 “우리 크루 대난투” 시작!</span>
+      </li>
+        <li onclick="toggleDetail(this)">
       <span class="date">2025-06-21</span>
-      <span class="content">서버 점검 안내: 6월 25일 오후 2시부터 4시까지 점검 예정입니다.</span>
+      <span class="summary">서버 점검 안내</span>
+      <div class="detail hidden">
+        6월 25일 오후 2시부터 4시까지 서버 점검이 예정되어 있습니다.  
+        점검 중에는 접속이 불가하니 참고 바랍니다!
+      </div>
     </li>
-    <li>
-      <span class="date">2025-06-15</span>
-      <span class="content">새로운 이벤트 “우리 크루 대난투” 시작!</span>
-    </li>
-    <!-- 더 많은 공지 추가 -->
-  </ul>
-</section>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2025 sparky crew. All rights reserved.
+  </footer>
+
+</body>
+</html>
