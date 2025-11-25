@@ -1,88 +1,313 @@
+/* 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: 'SUIT', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #fefefe;
-  color: #222;
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #0f0f0f;
+    color: #e0e0e0;
+    line-height: 1.6;
 }
 
-body.dark-mode {
-  background-color: #121212;
-  color: white;
-}
-
+/* 헤더 */
 header {
-  background: linear-gradient(90deg, #A66CFF, #9E9AC9);
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-  border-bottom: 5px solid #ffd6ec;
+    background: linear-gradient(to bottom, #1a1a1a, #0f0f0f);
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid #2a2a2a;
 }
 
-nav {
-  background: #fff;
-  border-bottom: 1px solid #ddd;
-  padding: 12px 20px;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  font-weight: bold;
+header h1 {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 3em;
+    color: #ffffff;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-weight: 900;
 }
 
-nav a {
-  color: #A66CFF;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
+header p {
+    font-size: 1.1em;
+    color: #999;
+    font-weight: 400;
 }
 
-nav a:hover {
-  color: #9E9AC9;
-  text-decoration: underline;
-}
-
-section {
-  padding: 30px;
-}
-
-h2 {
-  color: #A66CFF;
-  margin-bottom: 10px;
-}
-
-.video-preview {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.video-box {
-  background: #fff;
-  padding: 15px;
-  border-radius: 16px;
-  width: 320px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+/* 버튼 컨테이너 */
+.top-controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 30px 20px;
+    flex-wrap: wrap;
 }
 
 button {
-  background-color: #FFD6EC;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 999px;
-  color: #333;
-  font-weight: bold;
-  cursor: pointer;
-  margin: 20px 10px;
-  transition: background 0.3s ease;
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    padding: 12px 24px;
+    border-radius: 6px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
 }
 
 button:hover {
-  background-color: #ffcce5;
+    background: #2a2a2a;
+    border-color: #3a3a3a;
+    transform: translateY(-1px);
 }
 
+button:active {
+    transform: translateY(0);
+}
+
+button:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/* 네비게이션 */
+nav {
+    background: #1a1a1a;
+    border-top: 1px solid #2a2a2a;
+    border-bottom: 1px solid #2a2a2a;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    padding: 18px 30px;
+    transition: all 0.2s ease;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background: #2a2a2a;
+    border-bottom-color: #ffffff;
+}
+
+nav a:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: -2px;
+}
+
+/* 섹션 */
+section {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 30px;
+}
+
+h2 {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 2em;
+    color: #ffffff;
+    margin-bottom: 30px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #2a2a2a;
+    font-weight: 900;
+}
+
+/* 규칙 리스트 */
+#rules ul {
+    list-style: none;
+    display: grid;
+    gap: 12px;
+}
+
+#rules li {
+    background: #1a1a1a;
+    border-left: 3px solid #ffffff;
+    padding: 18px 20px;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: all 0.2s ease;
+}
+
+#rules li:hover {
+    background: #2a2a2a;
+    border-left-width: 4px;
+    padding-left: 24px;
+}
+
+/* 영상 섹션 */
+.video-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+.video-box {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 16px;
+    transition: all 0.2s ease;
+    width: 100%;
+    max-width: 380px;
+}
+
+.video-box:hover {
+    border-color: #3a3a3a;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.video-box video {
+    width: 100%;
+    border-radius: 4px;
+    background: #000;
+    display: block;
+}
+
+.video-box p {
+    margin-top: 12px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* 커뮤니티 섹션 */
+#board {
+    text-align: center;
+}
+
+#board p {
+    font-size: 1.1em;
+    color: #999;
+    line-height: 1.8;
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
+}
+
+/* 푸터 */
 footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 10px;
+    background: #1a1a1a;
+    color: #888;
+    text-align: center;
+    padding: 30px;
+    margin-top: 80px;
+    border-top: 1px solid #2a2a2a;
+    font-size: 0.9em;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+        letter-spacing: 1px;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .top-controls {
+        padding: 20px 15px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        text-align: center;
+        padding: 15px 20px;
+        border-bottom: 1px solid #2a2a2a;
+        border-right: none;
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    nav a:hover {
+        border-right-color: transparent;
+    }
+
+    .video-preview {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .video-box {
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    section {
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    #board p {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .top-controls {
+        gap: 8px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.85em;
+    }
+}
+
+/* 스크롤바 */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2a2a2a;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3a3a3a;
+}
+
+/* Firefox 스크롤바 */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #2a2a2a #0f0f0f;
 }

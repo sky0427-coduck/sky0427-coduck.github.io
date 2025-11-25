@@ -22,8 +22,11 @@
     <button onclick="toggleDarkMode()">
         <i class="fa-solid fa-moon"></i>
     </button>
+    <button onclick="location.href='main.html'" id="homeButton" title="홈으로 이동">
+        <i class="fa-solid fa-house"></i>
+    </button>
     <button onclick="notice()">공지사항</button>
-    <button onclick="alert('서버 IP: 추후 공개')">서버 접속</button>
+    <!--<button onclick="alert('서버 IP: 추후 공개')">서버 접속</button>-->
 </div>
 
 <nav>
@@ -33,17 +36,20 @@
     <a href="community.html">커뮤니티</a>
 </nav>
 
+<section id="rules">
+    <h2>⚔️ 서버 규칙</h2>
+    <ul>
+        <li>🎯 개인전 기반 PVP 서버 (약탈 가능)</li>
+        <li>🚫 채팅으로 욕설/비속어 3회 누적 시 영구 밴</li>
+        <li>💀 의도적 죽음 → 불사의 토템 발동 + 이동 제한</li>
+        <li>📹 게임 녹화 필수 / 녹화본 제출 의무</li>
+        <li>⚡ 핵/치트 사용 시 IP 차단</li>
+    </ul>
+</section>
 
 <section id="videos">
     <h2>최근 영상</h2>
     <div class="video-preview">
-        <div class="video-box">
-            <video width="100%" controls>
-                <source src="videos/test1.mp4" type="video/mp4" />
-                브라우저가 비디오를 지원하지 않습니다.
-            </video>
-            <p>사이트 소개영상</p>
-        </div>
         <div class="video-box">
             <video width="100%" controls>
                 <source src="videos/test2.mp4" type="video/mp4" />
@@ -51,6 +57,13 @@
             <p>⚡ 서버 안내영상</p>
         </div>
     </div>
+</section>
+
+<section id="board">
+    <h2>댓글</h2>
+    <p>아직 준비 중이에요! 😎<br>
+        곧 크루와 유저가 함께 소통할 수 있는<br>
+        개쩌는 게시판이 열립니다!</p>
 </section>
 
 

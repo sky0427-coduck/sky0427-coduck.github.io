@@ -1,0 +1,189 @@
+/* 공지사항 페이지 전용 CSS */
+
+/* 공지사항 헤더 영역 */
+.notice-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.notice-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* 공지사항 리스트 */
+.notice-board {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notice-card {
+    background: #f9f9f9;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 4px solid #667eea;
+}
+
+.notice-card:hover {
+    background: #f0ebff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+/* 다크모드 적용 */
+body.dark-mode .notice-card {
+    background: #1e1e1e;
+    border-left-color: #00ffff;
+}
+
+body.dark-mode .notice-card:hover {
+    background: #2a2a2a;
+    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.2);
+}
+
+/* 날짜 스타일 */
+.notice-card .date {
+    font-weight: bold;
+    color: #667eea;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+body.dark-mode .notice-card .date {
+    color: #00ffff;
+}
+
+/* 요약 내용 */
+.notice-card .content {
+    color: #333;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-bottom: 0;
+}
+
+body.dark-mode .notice-card .content {
+    color: #4e4e4e;
+}
+
+/* 세부 내용 */
+.notice-card .detail {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #4e4e4e;
+    color: #4e4e4e;
+    line-height: 1.6;
+}
+
+body.dark-mode .notice-card .detail {
+    border-top-color: #444;
+    color: #bbb;
+}
+
+.notice-card .detail ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.notice-card .detail li {
+    margin: 6px 0;
+}
+
+.notice-card .detail p {
+    margin: 8px 0;
+}
+
+/* 숨김 클래스 */
+.notice-card .hidden {
+    display: none;
+}
+
+/* 펼침 아이콘 */
+.notice-expand-icon {
+    float: right;
+    color: #999;
+    transition: transform 0.3s ease;
+    font-size: 1.2em;
+}
+
+.notice-card.active .notice-expand-icon {
+    transform: rotate(180deg);
+}
+
+/* 배지 스타일 */
+.notice-badge {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: bold;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.notice-badge.urgent {
+    background: #ff4444;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+body.dark-mode .notice-badge {
+    background: #00ffff;
+    color: #0a0e27;
+}
+
+body.dark-mode .notice-badge.urgent {
+    background: #ff4444;
+    color: white;
+}
+
+.notice-controls {
+    position: absolute;  /* 절대 위치 */
+    top: 20px;          /* 위에서 20px */
+    right: 20px;        /* 오른쪽에서 20px */
+}
+
+#homeButton {
+    position: fixed !important;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    padding: 0;
+    font-size: 1.5em;
+}
+
+#homeButton:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* 다크모드 버튼은 헤더에 유지 */
+#darkModeToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
