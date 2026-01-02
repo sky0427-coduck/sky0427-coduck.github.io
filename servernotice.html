@@ -14,17 +14,15 @@
 <body>
 
 <header>
-    <h1>⚔️ 푸른하늘 크루 ⚔️</h1>
-    <p>10대 청소년들이여 모여라</p>
+    <h1> 푸른하늘 크루 </h1>
+    <p>뭐해? 빨리들어와</p>
 </header>
 
 <div class="top-controls">
     <button onclick="toggleDarkMode()">
         <i class="fa-solid fa-moon"></i>
     </button>
-    <button onclick="location.href='main.html'" id="homeButton" title="홈으로 이동">
-        <i class="fa-solid fa-house"></i>
-    </button>
+
     <button onclick="notice()">공지사항</button>
     <!--<button onclick="alert('서버 IP: 추후 공개')">서버 접속</button>-->
 </div>
@@ -34,6 +32,7 @@
     <a href="servernotice.html">서버 규칙</a>
     <a href="#videos">영상</a>
     <a href="community.html">커뮤니티</a>
+    <a href="reference.html">창고</a>
 </nav>
 
 <section id="rules">
@@ -65,6 +64,10 @@
         곧 크루와 유저가 함께 소통할 수 있는<br>
         개쩌는 게시판이 열립니다!</p>
 </section>
+
+<button class="fixed-home-button" onclick="location.href='index.html'">
+    <i class="fa-solid fa-house"></i>
+</button>
 
 
 <footer>

@@ -14,7 +14,7 @@
 
 <header>
     <h1></h1>
-    <p>빨리 들어와!</p>
+    <p>네가 원하는 것들이 있기를!</p>
 </header>
 
 <div style="text-align: left;">
@@ -34,7 +34,6 @@
 <nav>
     <a href="about.html">크루 소개</a>
     <a href="servernotice.html">서버 규칙</a>
-    <a href="#videos">영상</a>
     <a href="community.html">커뮤니티</a>
     <a href="reference.html">창고</a>
 </nav>
@@ -42,51 +41,62 @@
 <section id="rules">
     <h2>모드 다운 규칙</h2>
     <ul>
-        <li>이 모드 코드는 오픈소스입니다. 코드 써도 됨.(출처 밝히기)</li>
-        <li>댓글에 욕설/비속어 사용 시 댓글사용 임시정지</li>
-        <li>서버용 모드가 많기 때문에 카테고리를 잘 설정해서 써주세요.</li>
+        <li>'창고'에 있는 모든 파일들 중 '오픈소스'태그가 붙어있는 파일들은 모두 오픈소스입니다.</li>
+        <li>라이선스 지침을 잘 따라주세요!</li>
+        <li>피드백은 선 안에서, 정직하게!</li>
     </ul>
 </section>
 
-<section id="videos">
-    <h2>어떻게 설치하는지 모르겠다면?</h2>
-    <div class="video-preview">
-        <div class="video-box">
-            <video width="100%" controls>
-                <source src="videos/test1.mp4" type="video/mp4" />
-                웹이 아직 비디오를 지원하지 않습니다.
-            </video>
-            <p>설치안내</p>
-        </div>
-        <div class="video-box">
-            <video width="100%" controls>
-                <source src="videos/test2.mp4" type="video/mp4" />
-            </video>
+<section class="card-row-section">
+    <div class="card-row">
+
+        <div class="center-card">
+            <h2>창고</h2>
             <p>
+                크루가 만든 모드,<br>
+                리소스팩, 실험작 모음
+            </p>
+            <button onclick="location.href='downloadpage.html'">
+                들어가기 →
+            </button>
+        </div>
+
+        <div class="center-card">
+            <h2>커뮤니티</h2>
+            <p>
+                <br>
 
             </p>
+            <button onclick="location.href='community.html'">
+                이야기하러 가기 →
+            </button>
         </div>
+
+        <div class="center-card">
+            <h2>영상</h2>
+            <p>
+                마크 플레이 영상과<br>
+                크루 방송 클립
+            </p>
+            <button onclick="location.href='videos.html'">
+                보러 가기 →
+            </button>
+        </div>
+
     </div>
 </section>
 
-<section id="board">
-    <h2>댓글</h2>
 
-    <div class="comment-form">
-        <input id="author" placeholder="닉네임" />
-        <textarea id="content" placeholder="댓글을 입력하세요"></textarea>
-        <button onclick="sendComment()">댓글 작성</button>
-    </div>
 
-    <ul id="commentList"></ul>
-</section>
+
+
 
 <button class="fixed-home-button" onclick="location.href='index.html'">
     <i class="fa-solid fa-house"></i>
 </button>
 
 <footer>
-    &copy; 2025 푸른하늘크루.
+    &copy; 2025 푸른하늘크루 <strong>1.0 BETA</strong>
 </footer>
 
 <script src="js/script.js"></script>
