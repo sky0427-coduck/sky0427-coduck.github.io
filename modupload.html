@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>크루 홈페이지</title>
+    <link href="https://fonts.googleapis.com/css2?family=SUIT&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/9dd56c72fd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header>
+    <h1></h1>
+    <p>우리들의 공간</p>
+</header>
+
+<div style="text-align: left;">
+    <button onclick="toggleDarkMode()">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+    <button onclick="notice()">공지사항</button>
+    <button onclick="location.href='main.html'" id="homeButton" title="홈으로 이동">
+        <i class="fa-solid fa-house"></i>
+    </button>
+</div>
+
+<nav>
+    <a href="about.html">크루 소개</a>
+    <a href="servernotice.html">서버 규칙</a>
+    <a href="#videos">영상</a>
+    <a href="community.html">커뮤니티</a>
+    <a href="downloadpage.html">마인크래프트 모드배포</a>
+</nav>
+
+<section id="rules">
+    <h2>모드 업로드 규칙</h2>
+    <ul>
+        <li>이 모드 코드는 오픈소스입니다. MIT라이선스를 가진 .jar파일만 업로드가 가능합니다.</li>
+        <li>음란물 또는 바이러스 등의 요소가 포함된 모드가 색출될 경우에는 업로더를 영구차단 혹은 계정초기화합니다.</li>
+        <li>카테고리를 잘 설정해주세요.</li>
+    </ul>
+</section>
+
+<section id="videos">
+    <h2>어떻게 업로드하는지 모르겠다면?</h2>
+    <div class="video-preview">
+        <div class="video-box">
+            <video width="100%" controls>
+                <source src="videos/test1.mp4" type="video/mp4" />
+                웹이 아직 비디오를 지원하지 않습니다.
+            </video>
+            <p>설치안내</p>
+        </div>
+    </div>
+</section>
+
+<section id="board">
+    <input id="modTitle" placeholder="모드 이름">
+    <textarea id="modDesc" placeholder="설명"></textarea>
+
+    <select id="loader">
+        <option>Fabric</option>
+        <option>Forge</option>
+    </select>
+
+    <input id="mcVersion" placeholder="마크 버전">
+    <input type="file" id="modFile" accept=".jar">
+
+    <button onclick="uploadMod()">
+        <i class="fa-solid fa-upload"></i>
+    </button><!--업로드 버튼-->
+
+</section>
+
+
+
+<footer>
+    &copy; 2025 푸른하늘크루.
+</footer>
+
+<button class="fixed-home-button" onclick="location.href='index.html'">
+    <i class="fa-solid fa-house"></i>
+</button>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
