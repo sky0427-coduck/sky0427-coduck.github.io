@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>푸른하늘크루</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="js/script.js"></script>
-    <script src="https://kit.fontawesome.com/9dd56c72fd.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css"/>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/9dd56c72fd.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css"/>
+
+
 </head>
+
 <body>
 
 <header>
@@ -20,10 +29,15 @@
 
 <div class="top-controls">
     <button onclick="toggleDarkMode()">
-        <i class="fa-solid fa-moon"></i>
+        <i id="themeIcon" class="fa-solid fa-moon"></i>
     </button>
     <button onclick="notice()">공지사항</button>
     <button onclick="alert('서버 IP: 추후 공개')">서버 접속</button>
+</div>
+
+<div class="auth-controls">
+    <button onclick="openLogin()">로그인</button>
+    <button onclick="openSignup()">회원가입</button>
 </div>
 
 <nav>
@@ -55,18 +69,22 @@
      2025 푸른하늘크루 | 모든 권리 보유
 </footer>
 
-
+<!-- JS (DOM 다 만든 뒤 실행) -->
+<!-- index.html의 </body> 직전에 추가 -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./js/script.js"></script>
 
 <div id="popup" class="popup">
     <div class="popup-content">
         <h2>잠깐!</h2>
         <p>지금은 베타 버전입니다.
         <br>2026/01/04에<br> 저희 웹사이트 1.0 릴리즈버전이 공개됩니다!
-        <br>공식런칭 후(01/04 오후 3시 이후)<br>로그인, 실시간게시판 등 다양한 기능이 잠금 해제됩니다.
+        <br>공식런칭 후(01/24 오후 3시 이후)<br>로그인, 실시간게시판 등 다양한 기능이 잠금 해제됩니다.
         <br>많은 기대 부탁드립니다!</p>
         <button onclick="closePopup()">확인</button>
     </div>
 </div>
+
 
 
 </body>

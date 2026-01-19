@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>회원가입</title>
+
+    <!-- index / login 과 같은 폰트 -->
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: #f2f5ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: inherit;
+        }
+
+        .signup-box {
+            width: 380px;
+            background: #fff;
+            border-radius: 14px;
+            padding: 32px;
+            box-shadow: 0 20px 40px rgba(0,0,0,.08);
+        }
+
+        .signup-box h2 {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .input-group {
+            margin-bottom: 14px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #4f6ef7;
+        }
+
+        #error-msg {
+            color: red;
+            font-size: 13px;
+            margin-bottom: 12px;
+            display: none;
+        }
+
+        #success-msg {
+            color: #2e7d32;
+            font-size: 13px;
+            margin-bottom: 12px;
+            display: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #4f6ef7;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #3d59d8;
+        }
+
+        .bottom-text {
+            text-align: center;
+            margin-top: 14px;
+            font-size: 13px;
+        }
+
+        .bottom-text a {
+            color: #4f6ef7;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="signup-box">
+    <h2>회원가입</h2>
+
+    <form onsubmit="return false;" novalidate>
+        <div class="input-group">
+            <input type="text" id="email" placeholder="이메일" />
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="id" placeholder="아이디" />
+        </div>
+
+        <div class="input-group">
+            <input type="password" id="password" placeholder="비밀번호 (8자 이상 | 특수문자 1개 이상 | 영어로)" />
+        </div>
+
+        <div class="input-group">
+            <input type="password" id="password-check" placeholder="비밀번호 확인" />
+        </div> <!--나중에 eula등 조항도 만들기. 이름칸도 만들기!-->
+
+        <p id="error-msg"></p>
+        <p id="success-msg"></p>
+
+        <button onclick="signup()">회원가입</button>
+    </form>
+
+    <div class="bottom-text">
+        이미 계정이 있나요? <a href="login.html">로그인</a>
+    </div>
+</div>
+
+<script type="module" src="signup.js"></script>
+</body>
+</html>

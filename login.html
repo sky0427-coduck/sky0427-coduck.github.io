@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>로그인</title>
+
+    <!-- index.html에서 쓰는 폰트 그대로 -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- 필요하면 여기서도 폰트 -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Pretendard&display=swap" rel="stylesheet"> -->
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: #f2f5ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: inherit;
+        }
+
+        .login-box {
+            width: 360px;
+            background: #fff;
+            border-radius: 14px;
+            padding: 32px;
+            box-shadow: 0 20px 40px rgba(0,0,0,.08);
+        }
+
+        .login-box h2 {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .input-group {
+            margin-bottom: 16px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #4f6ef7;
+        }
+
+        #error-msg {
+            color: red;
+            font-size: 13px;
+            margin-bottom: 12px;
+            display: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #4f6ef7;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #3d59d8;
+        }
+
+        .bottom-text {
+            text-align: center;
+            margin-top: 14px;
+            font-size: 13px;
+        }
+
+        .bottom-text a {
+            color: #4f6ef7;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-box">
+    <h2>로그인</h2>
+
+    <!-- 브라우저 검증 차단 -->
+    <form onsubmit="return false;" novalidate>
+        <div class="input-group">
+            <input type="text" id="id" placeholder="아이디" />
+        </div>
+
+        <div class="input-group">
+            <input type="password" id="password" placeholder="비밀번호" />
+        </div>
+
+        <p id="error-msg"></p>
+
+        <button onclick="login()">로그인</button>
+    </form>
+
+    <div class="bottom-text">
+        계정이 없다면? <a href="signup.html">회원가입하기!</a>
+    </div>
+</div>
+
+<script type="module" src="auth.js"></script>
+</body>
+</html>

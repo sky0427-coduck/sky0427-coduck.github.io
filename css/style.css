@@ -311,3 +311,417 @@ footer {
     scrollbar-width: thin;
     scrollbar-color: #2a2a2a #0f0f0f;
 }
+#commentList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.comment {
+    background: #1e1e1e;
+    padding: 12px 14px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.comment-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.comment-author {
+    font-weight: 600;
+    color: #4da3ff;
+}
+
+.comment-time {
+    font-size: 12px;
+    color: #888;
+}
+
+.comment-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ddd;
+}
+.comment-form {
+    background: #1a1a1a;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    background: #111;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.comment-form button {
+    background: #4da3ff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#crew {
+    margin: 40px 0;
+}
+
+.crew-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+}
+
+.crew-card {
+    background: #1e1e1e;
+    border-radius: 16px;
+    padding: 16px;
+    text-align: center;
+}
+
+.crew-card h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.crew-card .role {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* 리더 강조 */
+.crew-card.leader {
+    border: 2px solid #4da3ff;
+}
+
+.mini_title {
+    text-align: center;
+}
+
+/* 고정 홈버튼 - 스크롤해도 따라다님 */
+.fixed-home-button {
+    position: fixed !important;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    border: 2px solid #2a2a2a;
+    color: #ffffff;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* 중앙 카드 섹션 */
+.center-card-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* 카드 본체 */
+.center-card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 16px;
+    padding: 40px 32px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.center-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+}
+
+/* 카드 제목 */
+.center-card h2 {
+    margin-bottom: 16px;
+    font-size: 1.8em;
+}
+
+/* 카드 설명 */
+.center-card p {
+    color: #aaa;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+/* 카드 버튼 */
+.center-card button {
+    background: #4da3ff;
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.center-card button:hover {
+    background: #6bb6ff;
+    transform: scale(1.05);
+}
+
+/* 카드 3개 가로 정렬 */
+.card-row-section {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.card-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* 태블릿 */
+@media (max-width: 900px) {
+    .card-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 모바일 */
+@media (max-width: 600px) {
+    .card-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 360px;
+    width: 90%;
+}
+
+.popup-content h2 {
+    margin-bottom: 10px;
+}
+
+.popup-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ===== LIGHT MODE (푸른하늘 테마) ===== */
+body.light {
+    background: #f4f9ff;
+    color: #1a1a1a;
+}
+
+/* 헤더 */
+body.light header {
+    background: linear-gradient(to bottom, #dff0ff, #f4f9ff);
+    border-bottom: 1px solid #dce9f5;
+}
+
+body.light header h1 {
+    color: #1a1a1a;
+}
+
+body.light header p {
+    color: #555;
+}
+
+/* 카드 공통 */
+body.light .video-box,
+body.light .crew-card,
+body.light .center-card,
+body.light #board p,
+body.light footer {
+    background: #ffffff;
+    border-color: #dce9f5;
+    color: #1a1a1a;
+}
+
+/* 버튼 */
+body.light button {
+    background: #4da3ff;
+    color: #ffffff;
+    border: none;
+}
+
+body.light button:hover {
+    background: #6bb6ff;
+}
+
+/* 네비 */
+body.light nav {
+    background: #ffffff;
+    border-color: #dce9f5;
+}
+
+body.light nav a {
+    color: #333;
+}
+
+body.light nav a:hover {
+    background: #eaf5ff;
+    color: #1a1a1a;
+    border-bottom-color: #4da3ff;
+}
+
+/* 푸터 */
+body.light footer {
+    color: #666;
+}
+
+
+.auth-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin: 10px 20px;
+}
+
+.auth-controls button {
+    background-color: #3b5cff;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.auth-controls button:hover {
+    background-color: #2e47c7;
+}
+
+
+/* ===== 로그인 / 회원가입 공통 ===== */
+.auth-page {
+    background: linear-gradient(135deg, #e8f0ff, #f7faff);
+    min-height: 100vh;
+    font-family: "Noto Serif KR", serif;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.auth-box {
+    background: #ffffff;
+    width: 100%;
+    max-width: 380px;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.auth-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* ===== 입력칸 ===== */
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #f1f3f5;
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 15px;
+}
+
+.input-group i {
+    color: #666;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.input-group input {
+    border: none;
+    background: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* ===== 버튼 ===== */
+.auth-box button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #4a6cf7;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.auth-box button:hover {
+    background: #3958d8;
+}
+
+/* ===== 아래 링크 ===== */
+.auth-sub {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.auth-sub a {
+    color: #4a6cf7;
+    text-decoration: none;
+}
+
+.error-msg {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-bottom: 10px;
+    display: none;
+}/*회원가입/로그인 에러메시지*/

@@ -1,6 +1,6 @@
-/* 모든 페이지 공통 스타일 (메인 제외) */
+/* 공지사항 페이지 전용 CSS */
 
-/* 고정 홈 버튼 - 오른쪽 하단에 떠다님 */
+/* 고정 홈버튼 - 스크롤해도 따라다님 */
 .fixed-home-button {
     position: fixed !important;
     bottom: 30px;
@@ -28,58 +28,115 @@
     border-color: #ffffff;
 }
 
-.fixed-home-button:active {
-    transform: translateY(-3px) scale(1.05);
+body.dark-mode .fixed-home-button {
+    background: #1e1e1e;
+    border-color: #00ffff;
 }
 
-/* 툴팁 효과 */
-.fixed-home-button::before {
-    content: '홈으로';
-    position: absolute;
-    right: 70px;
-    background: #1a1a1a;
-    color: #ffffff;
-    padding: 8px 12px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
+body.dark-mode .fixed-home-button:hover {
+    border-color: #00ffff;
+    box-shadow: 0 8px 25px rgba(0, 255, 255, 0.3);
+}
+
+/* 공지사항 리스트 */
+.notice-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notice-list li {
+    background: #f9f9f9;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 4px solid #667eea;
+}
+
+.notice-list li:hover {
+    background: #f0ebff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+/* 다크모드 적용 */
+body.dark-mode .notice-list li {
+    background: #1e1e1e;
+    border-left-color: #00ffff;
+}
+
+body.dark-mode .notice-list li:hover {
+    background: #2a2a2a;
+    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.2);
+}
+
+/* 날짜 스타일 */
+.notice-list .date {
+    font-weight: bold;
+    color: #667eea;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+body.dark-mode .notice-list .date {
+    color: #00ffff;
+}
+
+/* 요약 내용 */
+.notice-list .content {
+    color: #333;
     font-weight: 600;
+    font-size: 1.1em;
+    margin-bottom: 0;
 }
 
-.fixed-home-button:hover::before {
-    opacity: 1;
+body.dark-mode .notice-list .content {
+    color: #e0e0e0;
 }
 
-/* 작은 화면에서는 크기 조정 */
-@media (max-width: 768px) {
-    .fixed-home-button {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
-        font-size: 1.2em;
-    }
-
-    .fixed-home-button::before {
-        font-size: 0.7rem;
-        right: 60px;
-    }
+/* 세부 내용 */
+.notice-list .detail {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    color: #555;
+    line-height: 1.6;
 }
 
-/* 아주 작은 화면 */
-@media (max-width: 480px) {
-    .fixed-home-button {
-        width: 45px;
-        height: 45px;
-        bottom: 15px;
-        right: 15px;
-        font-size: 1.1em;
-    }
+body.dark-mode .notice-list .detail {
+    border-top-color: #444;
+    color: #bbb;
+}
 
-    .fixed-home-button::before {
-        display: none; /* 툴팁 숨김 */
-    }
+.notice-list .detail ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.notice-list .detail li {
+    margin: 6px 0;
+    background: none;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    transform: none;
+    cursor: default;
+}
+
+.notice-list .detail li:hover {
+    background: none;
+    transform: none;
+}
+
+.notice-list .detail p {
+    margin: 8px 0;
+}
+
+/* 숨김 클래스 */
+.hidden {
+    display: none;
 }
