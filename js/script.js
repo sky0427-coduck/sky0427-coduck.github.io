@@ -228,5 +228,5 @@ function openLogin() {
 }
 
 function openSignup() {
-    window.location.href = "signup.html.html";
+    window.location.href = "signup.html";
 }
