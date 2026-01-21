@@ -1,8 +1,9 @@
 import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
+console.log("signup.js loaded");
 
 const supabase = createClient(
-    "https://YOUR_PROJECT_ID.supabase.co",
-    "YOUR_PUBLIC_ANON_KEY"
+    "https://veozdbhwrxcidodygxfc.supabase.co",
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZlb3pkYmh3cnhjaWRvZHlneGZjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg4OTkxODUsImV4cCI6MjA4NDQ3NTE4NX0.a5lVqr8zXRpbTBBVvUoEWw0_69yBR96QVNE_uub7qAk"
 );
 
 function showError(msg) {
@@ -36,13 +37,21 @@ window.signup = async function () {
         return;
     }
 
+    const agree = document.getElementById("agree").checked;
+
+    if (!agree) {
+        showError("개인정보 수집 및 이용에 동의해야 합니다.");
+        return;
+    }
+
+
     if (!isValidEmail(email)) {
         showError("이메일 형식이 올바르지 않습니다.");
         return;
     }
 
-    if (password.length < 6) {
-        showError("비밀번호는 최소 6자 이상이어야 합니다.");
+    if (password.length < 8) {
+        showError("비밀번호는 최소 8자 이상이어야 합니다.(영문, 특수문자만 가능)");
         return;
     }
 
@@ -62,4 +71,14 @@ window.signup = async function () {
     }
 
     showSuccess("회원가입 완료! 이메일을 확인해 주세요.");
+};
+
+window.loginWithGithub = async function () {
+    const { error } = await supabase.auth.signInWithOAuth({
+        provider: "github"
+    });
+
+    if (error) {
+        alert(error.message);
+    }
 };

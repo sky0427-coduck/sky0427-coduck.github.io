@@ -5,7 +5,7 @@
     <title>회원가입</title>
 
     <!-- index / login 과 같은 폰트 -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <style>
         body {
@@ -111,6 +111,19 @@
             <input type="password" id="password-check" placeholder="비밀번호 확인" />
         </div> <!--나중에 eula등 조항도 만들기. 이름칸도 만들기!-->
 
+        <button type="button" onclick="loginWithGithub()">
+            GitHub로 로그인
+        </button>
+
+        <div class="input-group" style="font-size: 13px;">
+            <label>
+                <input type="checkbox" id="agree" />
+                개인정보 수집 및 이용에 동의합니다 (필수)
+            </label>
+            <a href="privacy.html" target="_blank">개인정보 처리방침 보기</a>
+        </div>
+
+
         <p id="error-msg"></p>
         <p id="success-msg"></p>
 
@@ -122,6 +135,6 @@
     </div>
 </div>
 
-<script type="module" src="signup.js"></script>
+<script type="module" src="js/signup.js"></script>
 </body>
 </html>
