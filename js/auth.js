@@ -44,3 +44,37 @@ window.login = async function () {
     // 로그인 성공
     location.href = "index.html";
 };
+
+window.checkLogin = async function () {
+    const { data: { user } } = await supabase.auth.getUser();
+
+    const box = document.getElementById("user-info");
+
+    if (user) {
+        const name =
+            user.user_metadata?.user_name ||
+            user.user_metadata?.full_name ||
+            user.email ||
+            "사용자";
+
+        box.innerText = `안녕하세요, ${name} 👋`;
+    } else {
+        box.innerText = "로그인 안 됨";
+    }
+};
+
+window.addEventListener("DOMContentLoaded", () => {
+    checkLogin();
+});
+
+supabase.auth.onAuthStateChange((event, session) => {
+    console.log("AUTH EVENT:", event);
+
+    if (event === "SIGNED_IN") {
+        checkLogin();
+    }
+
+    if (event === "SIGNED_OUT") {
+        checkLogin();
+    }
+});
